@@ -1,0 +1,107 @@
+html{
+    scroll-behavior: smooth;
+ }
+ 
+ .menu{
+     margin-bottom: 120px;
+ }
+
+ .columnas {
+     padding-top: 5px;
+     padding-bottom: 5px;
+     text-align: center;
+ }
+
+ .titulo {
+     background: rebeccapurple;
+     color: #fff;
+     text-align: center;
+     padding-top: 8px;
+     padding-bottom: 8px;
+     font-family: "Montserrat";
+ }
+
+ .centrados{
+     height: 200px;
+ }
+
+ body{
+     background: #1f2235;
+ }
+
+ #navbarNav{
+     font-size: 20px;
+ }
+
+ .biografia{
+     background:#000;
+ }
+
+ .saludo{
+     padding-bottom: 120px;
+ }
+
+ #img{
+     width: 100%;
+     height: 360px;
+ }
+
+ #mensaje{
+     margin-top: 20%;
+ }
+
+ .estilo-nombre{
+     font-size: 35px;
+ }
+
+ .img-habilidades{
+     width: 30%;
+     height: 100px;
+     border-radius: 360px;
+     margin:auto;
+ }
+
+ .img-js{
+     width: 100%;
+     height: 190px;
+     display: block;
+     margin:auto;
+     margin-top: 20%;
+ }
+
+ .img-html{
+     width: 40%;
+     height: 120px;
+     margin:auto;
+     display: block;
+ }
+
+ .img-bootstrap{
+     width: 100%;
+ }
+
+ .img-sql{
+     width: 100%;
+     height: 200px;
+     margin-top: 20%;
+ }
+
+ .img-git{
+     margin-left: auto;
+     margin-right: auto;
+     display: block;
+     width: 100%;
+     height: 250px;
+}
+
+.pie-pagina{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.redes{
+    width: 60px;
+    height: 60px;
+    border-radius: 360px;
+    margin-right: 10px;
+}
