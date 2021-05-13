@@ -3,17 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function EscribirMensaje() {
-    let mensaje = '!Hola!, soy ';
+    let mensaje = '!Hola!, mi nombre es ';
     let contador = 0;
 
     let dondeEscribir = document.getElementById('mensaje');
 
-    let maquina = window.setInterval(function() {
+    let maquina = window.setInterval(function () {
         dondeEscribir.textContent += mensaje[contador];
 
         contador++;
 
-        if (contador === mensaje.length){
+        if (contador === mensaje.length) {
             window.clearInterval(maquina);
             EscribirNombre();
         }
@@ -26,12 +26,12 @@ function EscribirNombre() {
 
     let dondeEscribir = document.getElementById('mensaje');
 
-    let maquina = window.setInterval(function() {
+    let maquina = window.setInterval(function () {
         dondeEscribir.innerHTML += `<strong class="estilo-nombre text-warning">${nombre[contador]}</strong>`
 
         contador++;
 
-        if (contador === nombre.length){
+        if (contador === nombre.length) {
             window.clearInterval(maquina);
             EscribirSaludo();
         }
@@ -44,13 +44,33 @@ function EscribirSaludo() {
 
     let dondeEscribir = document.getElementById('saludar');
 
-    let maquina = window.setInterval(function() {
+    let maquina = window.setInterval(function () {
         dondeEscribir.textContent += saludo[contador];
 
         contador++;
 
-        if (contador === saludo.length){
+        if (contador === saludo.length) {
             window.clearInterval(maquina);
         }
     }, 70);
+}
+
+let mostrarElemento = false;
+function MostrarDetalle(elemento) {
+
+    let div = document.querySelector(`.${elemento}`);
+
+    if (!mostrarElemento) {
+        div.classList.remove('ocultar-elemento');
+        div.classList.add('mostrar-elemento');
+        mostrarElemento = true;
+    } 
+    else 
+    {
+        div.classList.remove('mostrar-elemento');
+        div.classList.add('ocultar-elemento');
+        mostrarElemento = false;
+    }
+
+    
 }

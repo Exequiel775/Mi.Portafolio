@@ -3,7 +3,11 @@ html{
  }
  
  .menu{
-     margin-bottom: 120px;
+    margin-bottom: 120px;
+ }
+
+ .menu a{
+    font-family: 'Arimo', sans-serif;
  }
 
  .columnas {
@@ -15,10 +19,8 @@ html{
  .titulo {
      background: rebeccapurple;
      color: #fff;
-     text-align: center;
      padding-top: 8px;
      padding-bottom: 8px;
-     font-family: "Montserrat";
  }
 
  .centrados{
@@ -31,6 +33,7 @@ html{
 
  #navbarNav{
      font-size: 20px;
+     float: right;
  }
 
  .biografia{
@@ -54,6 +57,12 @@ html{
      font-size: 35px;
  }
 
+ .contenedor-sobremi{
+     padding-bottom: 70px;
+     font-family: 'Kodchasan', sans-serif;
+
+    }
+
  .img-habilidades{
      width: 30%;
      height: 100px;
@@ -66,7 +75,7 @@ html{
      height: 190px;
      display: block;
      margin:auto;
-     margin-top: 20%;
+     margin-top: 5%;
  }
 
  .img-html{
@@ -104,4 +113,32 @@ html{
     height: 60px;
     border-radius: 360px;
     margin-right: 10px;
+}
+
+.ocultar-elemento{
+    display: none;
+    animation: fade-out 3s;
+}
+
+.mostrar-elemento{
+    display: block;
+    animation: fade-in 3s;
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
 }

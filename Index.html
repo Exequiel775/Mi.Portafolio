@@ -8,25 +8,29 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap" rel="stylesheet">
     <title>PORTAFOLIO</title>
 </head>
 
 <body>
-    
-    <div class="container-fluid menu">
-        <div class="row titulo">
-            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-left">
-            
-            </div>
-            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+
+    <header>
+        <div class="container-lg menu">
+            <div class="titulo">
+                <!--
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-left">
+                    asd
+                </div>-->
+                <!--<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">-->
                 <nav class="navbar navbar-expand-lg text-white navbar-dark">
-                    <a class="navbar-brand" href="#"></a>
+                    <a class="navbar-brand" href="#">PORTAFOLIO</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
                                 <a class="nav-link" href="#sobre-mi">SOBRE MI</a>
                             </li>
@@ -39,9 +43,10 @@
                         </ul>
                     </div>
                 </nav>
+                <!--</div>-->
             </div>
         </div>
-    </div>
+    </header>
 
     <div class="container-fluid saludo">
         <div class="row">
@@ -55,59 +60,67 @@
         </div>
     </div>
 
-    <div class="container mb-4">
+    <div class="container mb-4 contenedor-sobremi">
         <a name="sobre-mi"></a>
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <h2 class="text-warning">Sobre mi</h2>
-                <h2 class="text-white">Estoy finalizando mis estudios de la carrera de <strong class="text-warning">Programador Universitario</strong>
-                en <strong class="text-warning">Universidad Tecnologica Nacional</strong> (Ya no curso ningúna materia)</h2> 
-                <h2 class="text-white">
-                    Soy una persona con facilidad para adaptarse a nuevos grupos de trabajo y tareas, siempre dispuesto y 
-                    con ganas de explotar todos mis conocimientos que eh adquirido durante mi carrera universitaria y de forma autodidacta
-                    en los últimos años.
-                </h2>
-            </div>
-        </div>
+        <h2 class="text-warning">Sobre mi</h2>
+        <h2 class="text-white">Estoy finalizando mis estudios de la carrera de <strong class="text-warning">Programador
+                Universitario</strong>
+            en <strong class="text-warning">Universidad Tecnologica Nacional</strong> (Ya no curso ningúna
+            materia)</h2>
+        <h2 class="text-white">
+            Soy una persona con facilidad para adaptarse a nuevos grupos de trabajo y tareas, siempre dispuesto
+            y
+            con ganas de explotar todos mis conocimientos que eh adquirido durante mi carrera universitaria y de
+            forma autodidacta
+            en los últimos años.
+        </h2>
     </div>
 
     <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
         <a name="habilidades"></a>
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-dark"><h1>Habilidades</h1></div>
-            </div>
+            <h1 class="text-dark">Habilidades</h1>
             <hr>
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="margin-top: 3%; margin-bottom: 3%;">
                     <div class="form-inline">
-                        <img class="img-habilidades" src="Habilidades/c-sharp.png">
-                        <strong class="text-dark">Conocimientos en C# <strong class="text-danger">(Llevo 2 años programando en este
-                        lenguaje)</strong>
-                        tanto para aplicaciones WEB como escritorio.</strong>
-                        <strong>Solidos conocimientos de programación orientada a objetos, N-Capas, Entity Framework, Dapper, ASP.Net Core,
-                        Servicios web API (HTTP), Windows Forms.</strong>
+                        <img class="img-habilidades" id="c-sharp" onclick="MostrarDetalle('detalle-csharp')" src="Habilidades/c-sharp.png" style="margin-top:25%;">
+                        <div class="detalle-csharp ocultar-elemento">
+                            <strong class="text-dark">Conocimientos en C# <strong class="text-danger">(Llevo 2 años
+                                    programando en este
+                                    lenguaje)</strong>
+                                tanto para aplicaciones WEB como escritorio.</strong>
+                            <strong>Solidos conocimientos de programación orientada a objetos, N-Capas, Entity
+                                Framework,
+                                Dapper, ASP.Net Core MVC, ASP.Net Framework, SignalR,
+                                Servicios web API (HTTP), Windows Forms.</strong>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                    <img class="img-sql" src="Habilidades/sql.png">
+                    <img class="img-sql" src="Habilidades/sql.png" onclick="MostrarDetalle('detalle-sql')">
+                    <div class="detalle-sql ocultar-elemento">
+                        <strong class="text-dark">
+                            Consultas, procedimientos almacenados y funciones.
+                        </strong>
+                    </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="margin-top: 3%; margin-bottom: 3%;">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="margin-top: 9%; margin-bottom: 3%;">
+                    <img src="Habilidades/postgresql.jpeg" class="img-bootstrap">
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="margin-top: 5%; margin-bottom: 3%;">
+                    <img class="img-html" src="Habilidades/html.png">
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="margin-top: 5%; margin-bottom: 3%;">
+                    <img class="img-html" src="Habilidades/css.png">
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="margin-top: 1%; margin-bottom: 1%;">
                     <div class="text-center" style="width: 100%;">
-                        <img class="img-js" src="Habilidades/js.png" style="margin-top: 3%; margin-bottom: 3%;">
+                        <img class="img-js" src="Habilidades/js.png">
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="margin-top: 3%; margin-bottom: 3%;">
-                    <img class="img-html" src="Habilidades/html.png">
-                </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="margin-top: 3%; margin-bottom: 3%;">
-                    <img class="img-html" src="Habilidades/css.png">
-                </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="margin-top: 3%; margin-bottom: 3%;">
                     <img src="Habilidades/bootstrap.png" class="img-bootstrap">
-                </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="margin-top: 3%; margin-bottom: 3%;">
-                    <img src="Habilidades/postgresql.jpeg" class="img-bootstrap">
                 </div>
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="margin-top: 3%; margin-bottom: 3%;">
                     <img src="Habilidades/git.jpg" class="img-git">
@@ -123,17 +136,43 @@
         <a name="redes-sociales"></a>
         <div class="container">
             <div class="row">
-                <div class="col-12 text-white"><h1>REDES SOCIALES</h1>
-                    <li class="text-warning">Estoy actualizando mis proyectos en github, pronto estaran todos subidos.</li>
+                <div class="col-12 text-white">
+                    <h1>REDES SOCIALES</h1>
+                    <li class="text-warning">Estoy actualizando mis proyectos en github, pronto estaran todos subidos.
+                    </li>
                 </div>
             </div>
             <hr style="border:1px solid #fff">
             <div class="form-inline">
-                <a href="https://www.linkedin.com/in/exequiel-gonzalez-9779531a2/" target="_blank"><img src="Redes/linkedin.png" class="redes"></a>
-                <a href="https://github.com/Exequiel775/" target="_blank"><img src="Habilidades/github.png" class="redes"></a>
+                <a href="https://www.linkedin.com/in/exequiel-gonzalez-9779531a2/" target="_blank"><img
+                        src="Redes/linkedin.png" class="redes"></a>
+                <a href="https://github.com/Exequiel775/" target="_blank"><img src="Habilidades/github.png"
+                        class="redes"></a>
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalDetalle" tabindex="-1" aria-labelledby="modalDetalleLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -141,7 +180,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="portafolio.js"></script>
